@@ -3,7 +3,6 @@
 @Author: tushushu
 @Date: 2019-11-07 11:47:23
 """
-# Definition for singly-linked list.
 
 
 class ListNode:
