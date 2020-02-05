@@ -18,10 +18,10 @@ private:
 public:
     int romanToInt(string s)
     {
-        int ret = 0;
         int num = 0;
         string::iterator it;
         string::iterator end = s.end() - 1;
+        int ret = _mapping[*end];
         for (it = s.begin(); it != end; ++it)
         {
             num = _mapping[*it];
@@ -34,7 +34,6 @@ public:
                 ret += num;
             }
         }
-        ret += _mapping[*it];
         return ret;
     }
 };
