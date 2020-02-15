@@ -9,20 +9,11 @@ public:
     {
         int ret = 0;
         int flag = 0;
-        string::iterator end = s.end();
-        for (string::iterator it = s.begin(); it != end; ++it)
+        for (string::iterator it = s.begin(); it != s.end(); ++it)
         {
             if (*it != ' ')
             {
-                if (flag)
-                {
-                    ++ret;
-                }
-                else
-                {
-                    ret = 1;
-                    ++flag;
-                }
+                flag ? ++ret : ret = ++flag;
             }
             else
             {
