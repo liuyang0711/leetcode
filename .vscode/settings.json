@@ -14,11 +14,14 @@
     "files.associations": {
         "iostream": "cpp",
         "iosfwd": "cpp",
-        "ratio": "cpp"
+        "ratio": "cpp",
+        "vector": "cpp",
+        "iterator": "cpp"
     },
     "C_Cpp.default.cppStandard": "c++11",
     "C_Cpp.default.cStandard": "c11",
     "code-runner.executorMap": {
         "cpp": "cd $dir && g++ -std=c++11 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
-    }
+    },
+    "python.pythonPath": "/Users/tienan.liu/miniconda3/envs/py36/bin/python",
 }
