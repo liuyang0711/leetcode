@@ -13,8 +13,7 @@ public:
         unordered_map<int, int> cnt;
         for (vector<int>::iterator it = nums.begin(); it != nums.end(); ++it)
         {
-            cnt[*it] += 1;
-            if (cnt[*it] > cnt_max)
+            if (++cnt[*it] > cnt_max)
             {
                 cnt_max = cnt[*it];
                 ret = *it;
