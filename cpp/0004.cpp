@@ -6,7 +6,7 @@ using namespace std;
 class Solution
 {
 public:
-    int indexVector(vector<int> nums, int i)
+    inline int indexVector(vector<int> nums, int i)
     {
         if (i == -1)
         {
