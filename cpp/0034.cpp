@@ -10,8 +10,12 @@ public:
         vector<int> ret = {-1, -1};
         int low = 0;
         int high = nums.size() - 1;
+        if (high == -1 || target < nums[0] || target > nums[high]){
+            return ret;
+        }
         int mid;
         int min_high = high;
+        int max_low = low;
         nums.push_back(INT_MAX);
         while (low <= high)
         {
@@ -21,6 +25,9 @@ public:
                 high = mid - 1;
                 if (nums[high] > target){
                     min_high = high;
+                }
+                if (nums[high] == target){
+                    max_low = high;
                 }
             }
             else
@@ -41,7 +48,7 @@ public:
             return ret;
         }
         high = min_high;
-        low = mid;
+        low = max(mid, max_low);
         while (low <= high)
         {
             mid = (low + high) / 2;
